@@ -1,0 +1,172 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-family: sans-serif;
+    background-color: rgb(2, 16, 29);
+}
+.prod-card{
+    position: relative;
+    width: 300px;
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px rgb(4, 80, 110);
+}
+.prod-card img{
+    width: 100%;
+    transition: .4s;
+}
+.prod-card:hover img{
+    scale: 1.2;
+}
+.prod-card .prod-info{
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    background-color: rgba(2, 14, 32, 0.767);
+    box-shadow: 0px -10px 10px 5px rgba(2, 14, 32, 0.788);
+}
+.prod-card .prod-info p{
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 200;
+    color: rgb(175, 175, 175);
+}
+.prod-card .prod-info button{
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid white;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: .4s;
+}
+.prod-card .prod-info button:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(2, 14, 32);
+}
+.rate-section{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.rate-section .star{
+    width: 40px;
+    height: 40px;
+    background-image: url("./images/starsFrams/wired-0.png");
+    background-size: cover;
+    cursor: pointer;
+}
+
+@keyframes addStar {
+    0%{
+        background-image: url("./images/starsFrams/wired-0.png");
+    }
+    8%{
+        background-image: url("./images/starsFrams//wired-1.png");
+    }
+    16%{
+        background-image: url("./images/starsFrams//wired-2.png");
+    }
+    24%{
+        background-image: url("./images/starsFrams//wired-3.png");
+    }
+    32%{
+        background-image: url("./images/starsFrams//wired-4.png");
+    }
+    40%{
+        background-image: url("./images/starsFrams//wired-5.png");
+    }
+    48%{
+        background-image: url("./images/starsFrams//wired-6.png");
+    }
+    56%{
+        background-image: url("./images/starsFrams//wired-7.png");
+    }
+    64%{
+        background-image: url("./images/starsFrams//wired-8.png");
+    }
+    72%{
+        background-image: url("./images/starsFrams//wired-9.png");
+    }
+    80%{
+        background-image: url("./images/starsFrams//wired-10.png");
+    }
+    88%{
+        background-image: url("./images/starsFrams//wired-11.png");
+    }
+    100%{
+        background-image: url("./images/starsFrams//wired-11.png");
+    }
+}
+
+@keyframes removeStar {
+    0%{
+        background-image: url("./images/starsFrams//wired-11.png");
+    }
+    8%{
+        background-image: url("./images/starsFrams//wired-11.png");
+    }
+    16%{
+        background-image: url("./images/starsFrams//wired-10.png");
+    }
+    24%{
+        background-image: url("./images/starsFrams//wired-9.png");
+    }
+    32%{
+        background-image: url("./images/starsFrams//wired-8.png");
+    }
+    40%{
+        background-image: url("./images/starsFrams//wired-7.png");
+    }
+    48%{
+        background-image: url("./images/starsFrams//wired-6.png");
+    }
+    56%{
+        background-image: url("./images/starsFrams//wired-5.png");
+    }
+    64%{
+        background-image: url("./images/starsFrams//wired-4.png");
+    }
+    72%{
+        background-image: url("./images/starsFrams//wired-3.png");
+    }
+    80%{
+        background-image: url("./images/starsFrams//wired-2.png");
+    }
+    88%{
+        background-image: url("./images/starsFrams//wired-1.png");
+    }
+    100%{
+        background-image: url("./images/starsFrams/wired-0.png");
+    }
+}
+
+.hide-wallpaper{
+    width: 20px;
+    height: 20px;
+    background-image: "./images/starsFrams/wired-0.png";
+    animation: linear .4s addStar;
+    background-size: cover;
+    position: absolute;
+    z-index: -50;
+}
